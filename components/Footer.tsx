@@ -3,7 +3,6 @@ import Link from "next/link";
 import {footerLinks} from "@/constants"
 import { FILE } from "dns";
 
-// FILL THE CONSTANTS INDEX.TS FILE WITH THE REPO FILE
 
 const Footer = () => {
   return (
