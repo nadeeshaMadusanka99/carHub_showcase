@@ -9,12 +9,16 @@ import { useState, Fragment } from "react";
 const handleSearch = () => {
     console.log('searching')
 }
+
+
 const SearchManufacturer = ({
   manufacturer,
   setManufacturer,
 }: SearchManufacturerProps) => {
   const [query, setQuery] = useState("");
 
+  /* The `filteredManufacturers` constant is used to filter the `manufacturers` array based on the
+  `query` value. */
   const filteredManufacturers = query === "" ? manufacturers : manufacturers.filter((item) => (
     item.toLowerCase().replace(/\s+/g, "").includes(query.toLowerCase().replace(/\s+/g,""))))
   
