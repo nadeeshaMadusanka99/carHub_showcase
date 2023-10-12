@@ -13,18 +13,25 @@ const handleSearch = () => {
 
 const SearchManufacturer = ({
   manufacturer,
-  setManufacturer,
+  setManuFacturer,
 }: SearchManufacturerProps) => {
   const [query, setQuery] = useState("");
 
   /* The `filteredManufacturers` constant is used to filter the `manufacturers` array based on the
   `query` value. */
-  const filteredManufacturers = query === "" ? manufacturers : manufacturers.filter((item) => (
-    item.toLowerCase().replace(/\s+/g, "").includes(query.toLowerCase().replace(/\s+/g,""))))
-  
+  const filteredManufacturers =
+  query === ""
+    ? manufacturers
+    : manufacturers.filter((item) =>
+        item
+          .toLowerCase()
+          .replace(/\s+/g, "")
+          .includes(query.toLowerCase().replace(/\s+/g, ""))
+      );
+      
   return (
     <div className="search-manufacturer">
-      <Combobox value = {manufacturer} onChange={setManufacturer}>
+      <Combobox value = {manufacturer} onChange={setManuFacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
